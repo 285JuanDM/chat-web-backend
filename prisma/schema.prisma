@@ -1,0 +1,48 @@
+// infrastructure/db/prisma/schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+  binaryTargets = ["native", "windows", "debian-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(uuid())
+  username  String
+  email     String   @unique
+  password  String
+  rooms     RoomMember[]
+  messages  Message[]
+}
+
+model Room {
+  id        String   @id @default(uuid())
+  name      String
+  isPrivate Boolean   @default(false)
+  ownerId   String
+  members   RoomMember[]
+  messages  Message[]
+}
+
+model RoomMember {
+  id      String @id @default(uuid())
+  roomId  String
+  userId  String
+  User    User   @relation(fields: [userId], references: [id])
+  Room    Room   @relation(fields: [roomId], references: [id])
+}
+
+model Message {
+  id        String   @id @default(uuid())
+  roomId    String
+  userId    String
+  content   String
+  timestamp DateTime @default(now())
+
+  User User @relation(fields: [userId], references: [id])
+  Room Room @relation(fields: [roomId], references: [id])
+}
