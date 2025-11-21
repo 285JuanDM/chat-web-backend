@@ -10,7 +10,7 @@ export function sendMessage({ roomRepository, messagePublisher }) {
       roomId,
       userId,
       content,
-      timestamp: Date.now()
+      timestamp: new Date()
     };
 
     // publicamos mensaje a RabbitMQ

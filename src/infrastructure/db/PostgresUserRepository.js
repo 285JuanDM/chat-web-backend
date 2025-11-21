@@ -1,4 +1,3 @@
-// infrastructure/db/PostgresUserRepository.js
 import { UserRepository } from "../../domain/repositories/UserRepository.js";
 
 export class PostgresUserRepository extends UserRepository {
