@@ -1,6 +1,5 @@
-// application/services/MessageService.js
-import { sendMessage } from "../use-cases/sendMessage.js";
-import { getMessageHistory } from "../use-cases/getMessageHistory.js";
+import { getMessageHistory } from "../uses-cases/getMessageHistory.js";
+import { sendMessage } from "../uses-cases/sendMessage.js";
 
 export class MessageService {
   constructor({ roomRepository, messageRepository, messagePublisher }) {

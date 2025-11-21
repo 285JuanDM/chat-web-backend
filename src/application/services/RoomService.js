@@ -1,7 +1,7 @@
 // application/services/RoomService.js
-import { createRoom } from "../use-cases/createRoom.js";
-import { joinRoom } from "../use-cases/joinRoom.js";
-import { leaveRoom } from "../use-cases/leaveRoom.js";
+import { createRoom } from "../uses-cases/createRoom.js";
+import { joinRoom } from "../uses-cases/joinRoom.js";
+import { leaveRoom } from "../uses-cases/leaveRoom.js";
 
 export class RoomService {
   constructor({ roomRepository, userRepository }) {

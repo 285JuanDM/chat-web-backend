@@ -1,4 +1,3 @@
-// infrastructure/db/PostgresMessageRepository.js
 import { MessageRepository } from "../../domain/repositories/MessageRepository.js";
 
 export class PostgresMessageRepository extends MessageRepository {

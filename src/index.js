@@ -39,9 +39,14 @@ async function bootstrap() {
   // ---------------------------------
   // 1. PRISMA (Base de datos Postgres)
   // ---------------------------------
-  const prisma = new PrismaClient();
-  await prisma.$connect();
-  console.log("📦 Prisma conectado a Postgres.");
+ let prisma;
+    try {
+    prisma = new PrismaClient();
+    await prisma.$connect();
+    console.log("📦 Prisma conectado a Postgres.");
+    } catch (e) {
+    console.log("⚠️ Prisma NO conectado aún. Continuando sin detener el servidor...");
+    }
 
   // ---------------------------------
   // 2. RabbitMQ Connection
