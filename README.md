@@ -14,7 +14,7 @@ Este repositorio contiene el código fuente del **Backend** de nuestra aplicaci�
 La aplicación está diseñada para ser desplegada usando **Docker Compose**, lo que simplifica la configuración de dependencias.
 
 1.  Asegúrate de tener **Docker** y **Docker Compose** instalados en tu sistema.
-2.  Clona este repositorio:
+2.  Clona este repositorio
 3.  Ejecuta el siguiente comando en la terminal para construir las imágenes y levantar los contenedores:
     ```bash
     docker compose up --build -d
