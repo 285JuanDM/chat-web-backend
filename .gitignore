@@ -1,0 +1,42 @@
+# Node
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Env
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+log.txt
+
+# OS
+.DS_Store
+
+# Build
+dist/
+build/
+
+# Prisma
+/prisma/dev.db
+/prisma/migrations/
+
+# Docker
+docker-data/
+postgres-data/
+rabbitmq-data/
+
+# Editor
+.vscode/
+.idea/
+
+# Coverage
+coverage/
+
+# Temp
+tmp/
+*.tmp
