@@ -1,21 +1,13 @@
-import { prisma } from "./client.js";
-
-export class UserRepositoryPrisma {
-  async findByEmail(email) {
-    return prisma.user.findUnique({
-      where: { email }
-    });
-  }
-
+export class UserRepository {
   async findById(id) {
-    return prisma.user.findUnique({
-      where: { id }
-    });
+    throw new Error("UserRepository.findById not implemented");
   }
 
-  async create({ username, email, password }) {
-    return prisma.user.create({
-      data: { username, email, password }
-    });
+  async findByEmail(email) {
+    throw new Error("UserRepository.findByEmail not implemented");
+  }
+
+  async create(userData) {
+    throw new Error("UserRepository.create not implemented");
   }
 }
