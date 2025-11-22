@@ -29,7 +29,6 @@ import { RabbitMQConnection } from "./infrastructure/broker/RabbitMQConnection.j
 import { createHttpServer } from "./infrastructure/http/server.js";
 import { WebSocketServer } from "./infrastructure/websocket/WebSocketServer.js";
 
-
 // -------------------------
 // MAIN APP INITIALIZATION
 // -------------------------
