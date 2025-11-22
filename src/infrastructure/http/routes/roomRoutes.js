@@ -3,6 +3,7 @@ import { Router } from "express";
 export function roomRoutes(controller, authMiddleware) {
   const router = Router();
 
+  router.get("/", authMiddleware, controller.getAll);
   router.post("/", authMiddleware, controller.create);
   router.post("/:id/join", authMiddleware, controller.join);
   router.post("/:id/leave", authMiddleware, controller.leave);

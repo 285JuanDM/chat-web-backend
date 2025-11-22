@@ -1,10 +1,13 @@
-// infrastructure/db/PostgresRoomRepository.js
 import { RoomRepository } from "../../domain/repositories/RoomRepository.js";
 
 export class PostgresRoomRepository extends RoomRepository {
   constructor(prisma) {
     super();
     this.prisma = prisma;
+  }
+
+  findAll() {
+    return this.prisma.room.findMany();
   }
 
   findById(id) {

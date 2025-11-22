@@ -4,6 +4,7 @@ import { leaveRoom } from "../uses-cases/leaveRoom.js";
 
 export class RoomService {
   constructor({ roomRepository, userRepository }) {
+    this.roomRepository = roomRepository;
     this.createRoomUC = createRoom({ roomRepository });
     this.joinRoomUC = joinRoom({ roomRepository, userRepository });
     this.leaveRoomUC = leaveRoom({ roomRepository });
@@ -19,5 +20,9 @@ export class RoomService {
 
   async leave(data) {
     return this.leaveRoomUC(data);
+  }
+
+  async getAll() {
+    return this.roomRepository.findAll();
   }
 }

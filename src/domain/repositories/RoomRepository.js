@@ -1,4 +1,8 @@
 export class RoomRepository {
+  async findAll() {
+    throw new Error("RoomRepository.findAll not implemented");
+  }
+
   async findById(id) {
     throw new Error("RoomRepository.findById not implemented");
   }

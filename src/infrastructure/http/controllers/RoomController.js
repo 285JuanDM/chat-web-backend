@@ -3,6 +3,15 @@ export class RoomController {
     this.roomService = roomService;
   }
 
+  getAll = async (req, res) => {
+    try {
+      const rooms = await this.roomService.getAll();
+      res.json(rooms);
+    } catch (err) {
+      res.status(400).json({ error: err.message });
+    }
+  };
+
   create = async (req, res) => {
     try {
       const { name, isPrivate } = req.body;
