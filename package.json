@@ -4,8 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/infrastructure/http/server.js"
+    "dev": "nodemon src/infrastructure/http/server.js",
+    "test": "jest --runInBand",
+    "test:unit": "jest --runInBand tests/unit",
+    "test:integration": "jest --runInBand tests/integration"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "moduleFileExtensions": ["js"],
+    "transform": {}
   },
   "repository": {
     "type": "git",
@@ -25,6 +32,8 @@
     "express": "^5.1.0"
   },
   "devDependencies": {
+    "@jest/globals": "^30.2.0",
     "nodemon": "^3.1.11"
   }
+
 }
