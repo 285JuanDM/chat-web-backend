@@ -60,3 +60,4 @@ Aquí se detalla la estructura de los endpoints disponibles en el backend.
 Utiliza nuestra colección de Postman para probar rápidamente todos los endpoints y ver ejemplos de las peticiones (request) y respuestas (response).
 
 * **Enlace de la Colección:** [Backend Chats Collection](https://web.postman.co/workspace/a2c3cfc9-6b0a-4960-815d-7b1cec500dbd)
+* prueba workflow
