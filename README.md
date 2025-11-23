@@ -7,8 +7,6 @@ Este repositorio contiene el código fuente del **Backend** de nuestra aplicaci�
 **Oscar Vergara Moreno** 
 **Sofia Vargas Garzon**
 
----
-
 ## 🛠️ Cómo Ejecutar el Proyecto
 
 La aplicación está diseñada para ser desplegada usando **Docker Compose**, lo que simplifica la configuración de dependencias.
@@ -39,9 +37,6 @@ Aquí se detalla la estructura de los endpoints disponibles en el backend.
 | `GET` | `/rooms` | Obtiene una lista de todas las salas. |
 | `POST` | `/rooms` | Crea una nueva sala. |
 | `GET` | `/rooms/:id` | Obtiene los detalles de una sala específica. |
-| `PUT` | `/rooms/:id` | Actualiza los detalles de una sala específica. |
-| `DELETE` | `/rooms/:id` | Elimina una sala. |
-| `GET` | `/rooms/:id/messages` | **(Revisar)** Lista los mensajes dentro de una sala específica. |
 
 ### 📧 Módulo de Mensajes (`/messages`)
 
