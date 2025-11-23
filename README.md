@@ -31,7 +31,6 @@ Aquí se detalla la estructura de los endpoints disponibles en el backend.
 | :--- | :--- | :--- |
 | `POST` | `/auth/register` | Crea un nuevo usuario. |
 | `POST` | `/auth/login` | Inicia sesión y devuelve un token de autenticación. |
-| `GET` | `/auth/me` | Obtiene la información del usuario autenticado (Requiere Token). |
 
 ### 🏠 Módulo de Salas/Conversaciones (`/rooms`)
 
