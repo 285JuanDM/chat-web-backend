@@ -42,11 +42,7 @@ Aquí se detalla la estructura de los endpoints disponibles en el backend.
 
 | Método | Endpoint | Descripción |
 | :--- | :--- | :--- |
-| `GET` | `/messages` | Obtiene todos los mensajes (Global). |
-| `POST` | `/messages` | Crea un nuevo mensaje. |
-| `GET` | `/messages/:id` | Obtiene un mensaje específico. |
-| `PUT` | `/messages/:id` | Actualiza un mensaje específico. |
-| `DELETE` | `/messages/:id` | Elimina un mensaje específico. |
+| `GET` | `/messages/:id/history` | Obtiene todos los mensajes del usuario. |
 
 ---
 ## 🧪 Colección de Postman
