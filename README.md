@@ -44,7 +44,6 @@ Aquí se detalla la estructura de los endpoints disponibles en el backend.
 | :--- | :--- | :--- |
 | `GET` | `/messages/:id/history` | Obtiene todos los mensajes del usuario. |
 
----
 ## 🧪 Colección de Postman
 
 Utiliza nuestra colección de Postman para probar rápidamente todos los endpoints y ver ejemplos de las peticiones (request) y respuestas (response).
