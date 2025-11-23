@@ -3,9 +3,9 @@
 Este repositorio contiene el código fuente del **Backend** de nuestra aplicación de chats, desarrollado para gestionar la autenticación, salas (rooms) y mensajes entre usuarios.
 
 ## 👥 Grupo
-**Juan David Moreno Suarez**
-**Oscar Vergara Moreno** 
-**Sofia Vargas Garzon**
+- **Juan David Moreno Suarez**
+- **Oscar Vergara Moreno** 
+- **Sofia Vargas Garzon**
 
 ## 🛠️ Cómo Ejecutar el Proyecto
 
