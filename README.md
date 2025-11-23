@@ -17,7 +17,6 @@ La aplicación está diseñada para ser desplegada usando **Docker Compose**, lo
     ```bash
     docker compose up --build -d
     ```
----
 
 ## 🚀 Endpoints de la API 
 
@@ -36,7 +35,8 @@ Aquí se detalla la estructura de los endpoints disponibles en el backend.
 | :--- | :--- | :--- |
 | `GET` | `/rooms` | Obtiene una lista de todas las salas. |
 | `POST` | `/rooms` | Crea una nueva sala. |
-| `GET` | `/rooms/:id` | Obtiene los detalles de una sala específica. |
+| `POST` | `/rooms/:id/join` | El usuario se una a una sala. |
+| `POST` | `/rooms/:id/leave` | El usario de va de la sala. |
 
 ### 📧 Módulo de Mensajes (`/messages`)
 
