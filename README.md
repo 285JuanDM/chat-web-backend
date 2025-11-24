@@ -51,3 +51,67 @@ Utiliza nuestra colección de Postman para probar rápidamente todos los endpoin
 
 * **Enlace de la Colección:** [Backend Chats Collection](https://web.postman.co/workspace/a2c3cfc9-6b0a-4960-815d-7b1cec500dbd)
 * prueba workflow
+
+## ⚡ Pruebas de Carga y Rendimiento
+
+Para validar que el backend cumple con los requisitos del proyecto en cuanto a:
+
+- Concurrencia: soportar decenas de usuarios simultáneos en el Proof of Concept
+- Latencia: entregar mensajes en < 850 ms en condiciones normales
+
+Hemos preparado un script automático de pruebas, escrito en Python, que simula usuarios concurrentes enviando mensajes mediante WebSockets.
+
+### 📈 ¿Qué prueba este script?
+El script verifica:
+
+#### Concurrencia
+Simula entre 20–200 usuarios simultáneos, cada uno:
+
+- registrándose o iniciando sesión
+- conectándose vía WebSocket
+- uniéndose a una sala
+- enviando múltiples mensajes en paralelo
+
+#### Latencia
+Calcula:
+
+- tiempo mínimo
+- tiempo promedio
+- tiempo máximo
+- desviación estándar
+- porcentaje de mensajes entregados con < 850 ms
+
+#### Throughput
+Mensajes por segundo que el servidor es capaz de procesar.
+
+### ▶ Cómo ejecutar las pruebas de carga
+**1. Asegúrate de que el backend está funcionando**
+Si no lo está, actívalo así:
+
+```bash
+docker compose up --build -d
+```
+
+O si ya lo levantaste previamente:
+
+```bash
+docker compose start
+```
+
+**2. Instalar dependencias del script (solo la primera vez)**
+
+```bash
+pip install websockets requests
+```
+
+**3. Ejecutar el script de pruebas**
+
+Ejecutar el archivo ```load-test-script.py```
+
+El script comenzará a simular usuarios concurrentes y mostrará métricas como:
+
+- latencias individuales y promedio
+- usuarios que completaron la prueba
+- mensajes enviados vs recibidos
+- porcentaje que cumple < 850ms
+- throughput total
