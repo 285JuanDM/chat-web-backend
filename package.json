@@ -5,9 +5,11 @@
   "main": "index.js",
   "scripts": {
     "dev": "node src/index.js",
-    "test": "jest --runInBand",
-    "test:unit": "jest tests/unit --runInBand",
-    "test:integration": "jest tests/integration --runInBand"
+    "start": "node src/index.js",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --runInBand",
+    "test:unit": "node --experimental-vm-modules node_modules/jest/bin/jest.js tests/unit --runInBand",
+    "test:integration": "node --experimental-vm-modules node_modules/jest/bin/jest.js tests/integration --runInBand"
+
   },
   "repository": {
     "type": "git",

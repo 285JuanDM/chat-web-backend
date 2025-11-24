@@ -29,9 +29,12 @@ export function createHttpServer({ authService, roomService, messageService }) {
   app.use("/rooms", roomRoutes(roomCtrl, authMiddleware));
   app.use("/messages", messageRoutes(messageCtrl, authMiddleware));
 
-  server.listen(config.port, () => {
-    console.log(`HTTP Server running on port ${config.port}`);
-  });
+  // NO iniciar el servidor si estás en ambiente de test
+  if (process.env.NODE_ENV !== "test") {
+    server.listen(config.port, () => {
+      console.log(`HTTP Server running on port ${config.port}`);
+    });
+  }
 
   return server;
 }
